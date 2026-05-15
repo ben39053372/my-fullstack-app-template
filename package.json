@@ -1,11 +1,8 @@
 {
-  "name": "my-fullstack-app-template",
+  "name": "@ben39053372/my-fullstack-app-template",
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "peerDependencies": {
     "typescript": "^5"
   },
