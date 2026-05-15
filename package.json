@@ -1,0 +1,21 @@
+{
+  "name": "my-fullstack-app-template",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "api-dev": "bun --filter apis dev",
+    "db-generate": "bun --filter database generate",
+    "db-migrate": "bun --filter database migrate"
+  }
+}
