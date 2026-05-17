@@ -13,6 +13,7 @@
 	"scripts": {
 		"api-dev": "bun --filter apis dev",
 		"db-generate": "bun --filter database generate",
-		"db-migrate": "bun --filter database migrate"
+		"db-migrate": "bun --filter database migrate",
+		"web-dev": "bun --filter web dev"
 	}
 }
