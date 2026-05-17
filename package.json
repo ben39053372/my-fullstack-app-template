@@ -1,18 +1,18 @@
 {
-  "name": "@ben39053372/my-fullstack-app-template",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "api-dev": "bun --filter apis dev",
-    "db-generate": "bun --filter database generate",
-    "db-migrate": "bun --filter database migrate"
-  }
+	"name": "@ben39053372/my-fullstack-app-template",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"api-dev": "bun --filter apis dev",
+		"db-generate": "bun --filter database generate",
+		"db-migrate": "bun --filter database migrate"
+	}
 }

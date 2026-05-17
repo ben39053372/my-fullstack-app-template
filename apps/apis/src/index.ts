@@ -4,7 +4,7 @@ import { auth } from "auth";
 const app = new Hono();
 
 app.get("/", (c) => {
-  return c.text("Hello Hono!");
+	return c.text("Hello Hono!");
 });
 
 app.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw));
