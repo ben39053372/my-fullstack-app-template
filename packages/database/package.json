@@ -3,6 +3,7 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
+		"postinstall": "bun run generate",
 		"generate": "bunx --bun prisma generate",
 		"migrate": "bunx --bun prisma migrate dev"
 	},
