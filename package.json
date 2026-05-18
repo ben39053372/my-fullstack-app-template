@@ -14,9 +14,12 @@
 		"api-dev": "bun --filter apis dev",
 		"db-generate": "bun --filter database generate",
 		"db-migrate": "bun --filter database migrate",
-		"web-dev": "bun --filter web dev"
+		"web-dev": "bun --filter web dev",
+		"prepare": "husky",
+		"test": "bun run "
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.15"
+		"@biomejs/biome": "2.4.15",
+		"husky": "^9.1.7"
 	}
 }
