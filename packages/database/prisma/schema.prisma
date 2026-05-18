@@ -7,7 +7,7 @@ generator client {
   provider   = "prisma-client"
   output     = "../generated/prisma"
   engineType = "client"
-  runtime    = "bun"
+  runtime    = "workerd"
 }
 
 datasource db {
