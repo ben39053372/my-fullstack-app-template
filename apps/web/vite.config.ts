@@ -1,21 +1,34 @@
-import { defineConfig } from 'vite'
-import { devtools } from '@tanstack/devtools-vite'
+import { cloudflare } from "@cloudflare/vite-plugin";
+import tailwindcss from "@tailwindcss/vite";
+import { devtools } from "@tanstack/devtools-vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import viteReact from "@vitejs/plugin-react";
+import { defineConfig, loadEnv } from "vite";
+import { z } from "zod";
 
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+const envSchema = z.object({
+	BACKEND_URL: z.url(),
+});
 
-import viteReact from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { cloudflare } from '@cloudflare/vite-plugin'
+const config = defineConfig(({ mode }) => {
+	const env = loadEnv(mode, process.cwd(), "");
 
-const config = defineConfig({
-  resolve: { tsconfigPaths: true },
-  plugins: [
-    devtools(),
-    cloudflare({ viteEnvironment: { name: 'ssr' } }),
-    tailwindcss(),
-    tanstackStart(),
-    viteReact(),
-  ],
-})
+	const validatedEnv = envSchema.parse(env);
+	console.log({ validatedEnv });
+	return {
+		server: {
+			port: 8000,
+			strictPort: true,
+		},
+		resolve: { tsconfigPaths: true },
+		plugins: [
+			devtools(),
+			cloudflare({ viteEnvironment: { name: "ssr" } }),
+			tailwindcss(),
+			tanstackStart(),
+			viteReact(),
+		],
+	};
+});
 
-export default config
+export default config;
