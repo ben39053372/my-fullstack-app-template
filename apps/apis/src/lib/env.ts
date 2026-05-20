@@ -4,6 +4,7 @@ export const configSchema = z.object({
 	DATABASE_URL: z.url(),
 	BETTER_AUTH_URL: z.url(),
 	BETTER_AUTH_SECRET: z.string(),
+	RESEND_API_KEY: z.string(),
 });
 
 export const config = configSchema.parse(process.env);

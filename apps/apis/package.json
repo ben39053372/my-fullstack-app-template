@@ -10,6 +10,7 @@
 		"auth": "workspace:*",
 		"database": "workspace:*",
 		"hono": "^4.12.19",
+		"resend": "^6.12.3",
 		"zod": "^4.4.3"
 	},
 	"devDependencies": {
