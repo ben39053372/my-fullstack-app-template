@@ -12,8 +12,9 @@
 	],
 	"scripts": {
 		"api-dev": "bun --filter apis dev",
-		"db-generate": "bun --filter database generate",
-		"db-migrate": "bun --filter database migrate",
+		"db:generate": "bun --filter database generate",
+		"db:migrate": "bun --filter database migrate dev",
+		"db:deploy": "bun --filter database migrate deploy",
 		"web-dev": "bun --filter web dev",
 		"prepare": "husky",
 		"test": "bun run "

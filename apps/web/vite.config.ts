@@ -7,7 +7,7 @@ import { defineConfig, loadEnv } from "vite";
 import { z } from "zod";
 
 const envSchema = z.object({
-	BACKEND_URL: z.url(),
+	VITE_BACKEND_URL: z.url(),
 });
 
 const config = defineConfig(({ mode }) => {
