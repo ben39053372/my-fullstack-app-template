@@ -32,7 +32,7 @@ export function LoginForm({
     console.log(email, password);
     try {
       setIsLoading(true);
-      const { data, error } = await authClient.signIn.email({
+      const { error } = await authClient.signIn.email({
         email: email, // required
         password: password, // required
         rememberMe: true,
