@@ -1,4 +1,4 @@
-import { Link, Router, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { authClient } from "#/lib/auth-client.ts";
 import { Button } from "@/components/ui/button";
